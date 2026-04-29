@@ -6,13 +6,43 @@ const path = require("path");
 const fs = require("fs");
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
+
+const ADMIN_LOGIN = "Artem";
+const ADMIN_PASSWORD = "Artemmaunar45"; // поменяй на свой пароль
+
+function adminAuth(req, res, next) {
+  const auth = req.headers.authorization;
+
+  if (!auth) {
+    res.setHeader("WWW-Authenticate", 'Basic realm="Admin Panel"');
+    return res.status(401).send("Нужна авторизация");
+  }
+
+  const encoded = auth.split(" ")[1];
+  const decoded = Buffer.from(encoded, "base64").toString();
+  const [login, password] = decoded.split(":");
+
+  if (login === ADMIN_LOGIN && password === ADMIN_PASSWORD) {
+    return next();
+  }
+
+  res.setHeader("WWW-Authenticate", 'Basic realm="Admin Panel"');
+  return res.status(401).send("Неверный логин или пароль");
+}
 
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use(express.static("public"));
+app.get("/admin.html", adminAuth, (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "admin.html"));
+});
+
+app.use(express.static("public", {
+  index: "index.html"
+}));
+
 app.use("/uploads", express.static("uploads"));
 
 if (!fs.existsSync("uploads")) {
@@ -47,7 +77,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
-app.post("/add-product", upload.single("image"), (req, res) => {
+app.post("/add-product", adminAuth, upload.single("image"), (req, res) => {
   const { name, code, price, sv, category, note } = req.body;
   const image = req.file ? `/uploads/${req.file.filename}` : "";
 
@@ -69,7 +99,7 @@ app.get("/products", (req, res) => {
   });
 });
 
-app.put("/products/:id", upload.single("image"), (req, res) => {
+app.put("/products/:id", adminAuth, upload.single("image"), (req, res) => {
   const id = req.params.id;
   const { name, code, price, sv, category, note } = req.body;
 
@@ -99,7 +129,7 @@ app.put("/products/:id", upload.single("image"), (req, res) => {
   });
 });
 
-app.delete("/products/:id", (req, res) => {
+app.delete("/products/:id", adminAuth, (req, res) => {
   const id = req.params.id;
 
   db.get("SELECT image FROM products WHERE id = ?", [id], (err, product) => {
