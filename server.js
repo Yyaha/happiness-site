@@ -35,8 +35,8 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get("/admin.html", adminAuth, (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "admin.html"));
+app.get("/admin", adminAuth, (req, res) => {
+  res.sendFile(path.join(__dirname, "admin-private", "admin.html"));
 });
 
 app.use(express.static("public", {
