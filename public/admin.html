@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Админка HAPPINESS</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<main class="admin-page">
+  <div class="admin-container">
+    <div class="admin-head">
+      <div>
+        <h1>Админка HAPPINESS</h1>
+        <p>Добавление и редактирование товаров</p>
+      </div>
+
+      <a href="catalog.html" class="btn btn--primary">Открыть каталог</a>
+    </div>
+
+    <form class="admin-form" id="productForm">
+      <input type="hidden" id="productId" name="id">
+
+      <div class="form-group">
+        <label>Название товара</label>
+        <input type="text" name="name" id="name" required>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Код товара</label>
+          <input type="text" name="code" id="code">
+        </div>
+
+        <div class="form-group">
+          <label>Цена</label>
+          <input type="number" name="price" id="price" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>SV</label>
+          <input type="number" name="sv" id="sv" step="0.1">
+        </div>
+
+        <div class="form-group">
+          <label>Категория</label>
+          <select name="category" id="category" required>
+            <option value="cleaning">Очищение</option>
+            <option value="recovery">Восстановление и омоложение</option>
+            <option value="care">Ежедневный уход</option>
+            <option value="family">Товары для семьи</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Описание / примечание</label>
+        <textarea name="note" id="note"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>Фото товара</label>
+        <input type="file" name="image" id="image" accept="image/*">
+        <small>При редактировании фото можно не выбирать — останется старое.</small>
+      </div>
+
+      <button type="submit" class="order-premium-btn" id="submitBtn">
+        Добавить товар
+      </button>
+
+      <button type="button" class="admin-cancel-btn" id="cancelEditBtn" style="display:none;">
+        Отменить редактирование
+      </button>
+
+      <p class="form-status" id="adminStatus"></p>
+    </form>
+
+    <div class="admin-products">
+      <h2>Товары в базе</h2>
+      <div id="adminProductsList"></div>
+    </div>
+  </div>
+</main>
+
+<script src="admin.js"></script>
+</body>
+</html>

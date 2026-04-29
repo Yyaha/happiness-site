@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Каталог HAPPINESS</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">
+        <span class="logo__mark">H</span>
+        <span class="logo__text">HAPPINESS</span>
+      </a>
+
+      <nav class="nav">
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="admin.html">Админка</a>
+        <a href="index.html#contacts">Контакты</a>
+      </nav>
+
+      <div class="header__actions">
+        <a href="https://wa.me/87762704482" target="_blank" class="btn btn--small btn--primary">WhatsApp</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="catalog-page-hero visible">
+      <div class="container">
+        <div class="catalog-page-hero__box">
+          <div>
+            <div class="badge">Полный каталог</div>
+            <h1>Каталог продукции HAPPINESS</h1>
+            <p>Все товары загружаются из базы данных.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="catalog-page visible">
+      <div class="container">
+
+        <!-- 🔥 ФИЛЬТР -->
+        <div class="catalog-filter-panel">
+          <button class="filter-btn active-filter" data-category="all">Все товары</button>
+          <button class="filter-btn" data-category="cleaning">Очищение</button>
+          <button class="filter-btn" data-category="recovery">Восстановление и омоложение</button>
+          <button class="filter-btn" data-category="care">Ежедневный уход</button>
+          <button class="filter-btn" data-category="family">Товары для семьи</button>
+        </div>
+
+        <!-- 🔍 ПОИСК -->
+        <div class="catalog-tools">
+          <input type="text" id="catalogSearchInput" placeholder="Поиск товара..." />
+        </div>
+
+        <!-- ТОВАРЫ -->
+        <div class="catalog-grid" id="catalogGrid"></div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 HAPPINESS Казахстан. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="./catalog.js"></script>
+</body>
+</html>

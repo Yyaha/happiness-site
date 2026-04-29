@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HAPPINESS Казахстан — продукция для здоровья и ухода</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">
+        <span class="logo__mark">H</span>
+        <span class="logo__text">HAPPINESS</span>
+      </a>
+
+      <nav class="nav">
+        <a href="#home">Главная</a>
+        <a href="#categories">Категории</a>
+        <a href="#catalog-preview">Каталог</a>
+        <a href="#order">Заказать</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+
+      <div class="header__actions">
+        <a href="https://wa.me/87762704482" target="_blank" class="btn btn--small btn--primary">WhatsApp</a>
+        <button class="burger" id="burgerBtn" type="button">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#home">Главная</a>
+      <a href="#categories">Категории</a>
+      <a href="#catalog-preview">Каталог</a>
+      <a href="#order">Заказать</a>
+      <a href="#contacts">Контакты</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section-reveal" id="home">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <div class="badge">HAPPINESS Казахстан</div>
+          <h1>Продукция для здоровья, красоты, ухода и семьи</h1>
+          <p>
+            Удобный каталог HAPPINESS с категориями, ценами и быстрым оформлением заявки через WhatsApp.
+          </p>
+
+          <div class="hero__buttons">
+            <a href="catalog.html" class="btn btn--primary">Смотреть весь каталог</a>
+            <a href="#order" class="btn btn--secondary">Оформить заявку</a>
+            <a href="https://wa.me/87762704482?text=Здравствуйте!%20Хочу%20получить%20консультацию%20по%20продукции%20HAPPINESS" target="_blank" class="btn btn--consult">
+              Получить консультацию
+            </a>
+          </div>
+
+          <div class="hero__chips">
+            <span>Очищение</span>
+            <span>Омоложение</span>
+            <span>Ежедневный уход</span>
+            <span>Для семьи</span>
+          </div>
+        </div>
+
+        <div class="hero__visual">
+          <div class="hero-card hero-card--big">
+            <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=900&q=80" alt="HAPPINESS продукция">
+          </div>
+
+          <div class="hero-card hero-card--small">
+            <img src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=700&q=80" alt="HAPPINESS уход">
+          </div>
+
+          <div class="floating-note floating-note--one">Качественный товар</div>
+          <div class="floating-note floating-note--two">Быстрый заказ</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats section-reveal">
+      <div class="container stats__grid">
+        <div class="stat-card">
+          <strong>37+</strong>
+          <span>товаров в каталоге</span>
+        </div>
+        <div class="stat-card">
+          <strong>4</strong>
+          <span>основные категории</span>
+        </div>
+        <div class="stat-card">
+          <strong>24/7</strong>
+          <span>связь через мессенджеры</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="categories section-reveal" id="categories">
+      <div class="container">
+        <div class="categories-head">
+          <div class="section-label">Категории</div>
+          <h2>Выберите нужное направление</h2>
+          <p>Категории сделаны по вашему прайс-листу HAPPINESS.</p>
+        </div>
+
+        <div class="categories-cards-grid categories-cards-grid--four">
+          <a href="catalog.html?category=cleaning" class="category-big-card category-big-card--blue">
+            <div class="category-big-card__image">
+              <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=700&q=80" alt="Очищение">
+            </div>
+            <div class="category-big-card__content">
+              <span class="category-big-card__number">01</span>
+              <h3>Очищение</h3>
+              <p>Чаи, капсулы, пластыри и продукты очищающего направления.</p>
+            </div>
+          </a>
+
+          <a href="catalog.html?category=recovery" class="category-big-card category-big-card--light">
+            <div class="category-big-card__image">
+              <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=700&q=80" alt="Восстановление">
+            </div>
+            <div class="category-big-card__content">
+              <span class="category-big-card__number">02</span>
+              <h3>Восстановление и омоложение</h3>
+              <p>Продукты для восстановления, поддержки и омоложения.</p>
+            </div>
+          </a>
+
+          <a href="catalog.html?category=care" class="category-big-card category-big-card--blue-soft">
+            <div class="category-big-card__image">
+              <img src="https://images.unsplash.com/photo-1620916297397-a4a5402a3c6c?auto=format&fit=crop&w=700&q=80" alt="Ежедневный уход">
+            </div>
+            <div class="category-big-card__content">
+              <span class="category-big-card__number">03</span>
+              <h3>Ежедневный уход</h3>
+              <p>Зубные пасты, маски, шампунь, масло для душа и средства ухода.</p>
+            </div>
+          </a>
+
+          <a href="catalog.html?category=family" class="category-big-card category-big-card--orange">
+            <div class="category-big-card__image">
+              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=700&q=80" alt="Товары для семьи">
+            </div>
+            <div class="category-big-card__content">
+              <span class="category-big-card__number">04</span>
+              <h3>Товары для семьи</h3>
+              <p>Озонатор, накладки, пояс, подушка, наматрасник и одеяло.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="catalog-preview section-reveal" id="catalog-preview">
+      <div class="container">
+        <div class="section-top">
+          <div>
+            <div class="section-label">Каталог</div>
+            <h2>Популярная продукция</h2>
+            <p>На главной — только короткая витрина. Полный каталог находится на отдельной странице.</p>
+          </div>
+
+          <a href="catalog.html" class="btn btn--primary">Смотреть весь каталог</a>
+        </div>
+
+        <div class="preview-grid" id="previewGrid"></div>
+      </div>
+    </section>
+
+    <section class="how section-reveal">
+      <div class="container">
+        <div class="how-box">
+          <div class="how-box__left">
+            <div class="section-label">Как заказать</div>
+            <h2>Все просто</h2>
+            <p>Выберите товар, заполните заявку, и менеджер свяжется с вами для подтверждения заказа.</p>
+          </div>
+
+          <div class="how-box__right">
+            <div class="how-mini-step">
+              <strong>01</strong>
+              <span>Выберите товар в каталоге</span>
+            </div>
+            <div class="how-mini-step">
+              <strong>02</strong>
+              <span>Нажмите кнопку «Заказать»</span>
+            </div>
+            <div class="how-mini-step">
+              <strong>03</strong>
+              <span>Заполните контактные данные</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="order section-reveal" id="order">
+      <div class="container">
+        <div class="order-premium">
+          <div class="order-premium__left">
+            <div class="order-premium__badge">Заявка</div>
+            <h2><span>HAPPINESS</span><br>оформить<br>заказ</h2>
+
+            <div class="order-premium__text">
+              <h3>После заявки:</h3>
+              <ul>
+                <li>мы увидим выбранный товар;</li>
+                <li>свяжемся с вами удобным способом;</li>
+                <li>уточним количество, город и доставку;</li>
+                <li>подтвердим итоговую стоимость заказа.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="order-premium__right">
+            <form class="order-premium-form" id="orderForm">
+              <div class="form-group">
+                <label for="productInput">Выбранный товар</label>
+                <select id="productInput" required>
+                  <option value="">Выберите товар</option>
+                </select>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="quantity">Количество</label>
+                  <input type="number" id="quantity" min="1" value="1" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="city">Город</label>
+                  <input type="text" id="city" placeholder="Введите город" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="name">Ваше имя</label>
+                <input type="text" id="name" placeholder="Введите имя" required>
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Телефон</label>
+                <input type="tel" id="phone" placeholder="+7 (___) ___-__-__" required>
+              </div>
+
+              <div class="form-group">
+                <label>Как удобнее связаться</label>
+                <div class="contact-methods">
+                  <label class="radio-pill">
+                    <input type="radio" name="contactMethod" value="WhatsApp" checked>
+                    <span>WhatsApp</span>
+                  </label>
+
+                  <label class="radio-pill">
+                    <input type="radio" name="contactMethod" value="Telegram">
+                    <span>Telegram</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="address">Адрес / комментарий по доставке</label>
+                <textarea id="address" placeholder="Напишите адрес или удобный район" required></textarea>
+              </div>
+
+              <button class="order-premium-btn" id="orderSubmitBtn" type="submit">
+                Отправить заявку
+              </button>
+
+              <p class="form-status" id="formStatus"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contacts section-reveal" id="contacts">
+      <div class="container contacts-box">
+        <div>
+          <div class="section-label">Контакты</div>
+          <h2>Свяжитесь с нами</h2>
+          <p>Можно написать напрямую в WhatsApp, Telegram или Instagram.</p>
+        </div>
+
+        <div class="contacts-links">
+          <a href="https://wa.me/87762704482" target="_blank">WhatsApp</a>
+          <a href="https://wa.me/87051616018" target="_blank1">WhatsApp</a>
+          <a href="mailto:artemmaunar@gmail.com">artemmaunar@gmail.com</a>
+          <a href="https://www.instagram.com/olesya.happiness/" target="_blank">Instagram</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 HAPPINESS Казахстан. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
