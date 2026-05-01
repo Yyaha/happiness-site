@@ -1313,27 +1313,30 @@ select {
   margin-bottom: 14px;
 }
 .seo-block {
-  background: #f8f9fb;
-  padding: 60px 20px;
+  padding: 70px 20px;
+  background: #ffffff;
 }
 
 .seo-block .container {
-  max-width: 900px;
+  max-width: 980px;
   margin: 0 auto;
+  padding: 40px;
+  border-radius: 28px;
+  background: linear-gradient(135deg, #f7fbff, #ffffff);
+  box-shadow: 0 20px 60px rgba(20, 60, 120, 0.08);
 }
 
 .seo-block h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
-  text-align: center;
+  font-size: 30px;
+  color: #123b73;
+  margin-bottom: 18px;
 }
 
 .seo-block p {
   font-size: 16px;
-  line-height: 1.6;
-  margin-bottom: 15px;
-  color: #555;
-  text-align: center;
+  line-height: 1.8;
+  color: #5d6b7a;
+  margin-bottom: 12px;
 }
 
 /* название */
