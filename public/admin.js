@@ -18,7 +18,7 @@ form.addEventListener("submit", async (e) => {
   const method = productId ? "PUT" : "POST";
 
   const res = await fetch(url, {
-    method: method,
+    method,
     body: formData
   });
 
@@ -47,6 +47,7 @@ async function loadAdminProducts() {
 
         <div>
           <h3>${product.name}</h3>
+          <p><b>Позиция:</b> ${product.sort_order || 999}</p>
           <p><b>Код:</b> ${product.code || "—"}</p>
           <p><b>Цена:</b> ${Number(product.price).toLocaleString("ru-RU")} ₸</p>
           <p><b>SV:</b> ${product.sv || "—"}</p>
@@ -72,16 +73,14 @@ function editProduct(id) {
   document.getElementById("code").value = product.code || "";
   document.getElementById("price").value = product.price || "";
   document.getElementById("sv").value = product.sv || "";
+  document.getElementById("sort_order").value = product.sort_order || 999;
   document.getElementById("category").value = product.category || "cleaning";
   document.getElementById("note").value = product.note || "";
 
   submitBtn.textContent = "Сохранить изменения";
   cancelEditBtn.style.display = "block";
 
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
+  window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
 cancelEditBtn.addEventListener("click", resetForm);
@@ -89,6 +88,7 @@ cancelEditBtn.addEventListener("click", resetForm);
 function resetForm() {
   form.reset();
   document.getElementById("productId").value = "";
+  document.getElementById("sort_order").value = 999;
   submitBtn.textContent = "Добавить товар";
   cancelEditBtn.style.display = "none";
 }
