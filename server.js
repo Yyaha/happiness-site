@@ -128,6 +128,9 @@ app.put("/products/:id", adminAuth, upload.single("image"), (req, res) => {
     );
   });
 });
+app.get("/index.html", (req, res) => {
+  res.redirect(301, "/");
+});
 
 app.delete("/products/:id", adminAuth, (req, res) => {
   const id = req.params.id;
