@@ -9,7 +9,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 const ADMIN_LOGIN = "Artem";
-const ADMIN_PASSWORD = "ПОСТАВЬ_НОВЫЙ_ПАРОЛЬ";
+const ADMIN_PASSWORD = "Artemmaunar45";
 
 function adminAuth(req, res, next) {
   const auth = req.headers.authorization;
