@@ -116,3 +116,39 @@ document.querySelectorAll(".section-reveal").forEach((item) => {
 });
 
 loadHomeProducts();
+
+function startPromoTimer() {
+  const endDate = new Date("2026-06-09T23:59:59").getTime();
+
+  const daysEl = document.getElementById("promoDays");
+  const hoursEl = document.getElementById("promoHours");
+  const minutesEl = document.getElementById("promoMinutes");
+  const secondsEl = document.getElementById("promoSeconds");
+
+  if (!daysEl || !hoursEl || !minutesEl || !secondsEl) return;
+
+  setInterval(() => {
+    const now = new Date().getTime();
+    const distance = endDate - now;
+
+    if (distance <= 0) {
+      daysEl.textContent = "00";
+      hoursEl.textContent = "00";
+      minutesEl.textContent = "00";
+      secondsEl.textContent = "00";
+      return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((distance / (1000 * 60)) % 60);
+    const seconds = Math.floor((distance / 1000) % 60);
+
+    daysEl.textContent = String(days).padStart(2, "0");
+    hoursEl.textContent = String(hours).padStart(2, "0");
+    minutesEl.textContent = String(minutes).padStart(2, "0");
+    secondsEl.textContent = String(seconds).padStart(2, "0");
+  }, 1000);
+}
+
+startPromoTimer();
