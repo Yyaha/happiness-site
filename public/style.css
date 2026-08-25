@@ -1622,3 +1622,328 @@ select {
     font-size: 26px;
   }
 }
+.promo-kz {
+  padding: 70px 20px;
+  background: linear-gradient(135deg, #f7faff, #ffffff);
+}
+
+.promo-kz__box {
+  max-width: 1180px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 32px;
+  background: #fff;
+  box-shadow: 0 30px 80px rgba(15, 55, 120, 0.15);
+  border: 1px solid rgba(20, 70, 160, 0.12);
+  position: relative;
+}
+
+.promo-kz__box::before {
+  content: "";
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  left: -130px;
+  top: -130px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 102, 0, 0.18), transparent 68%);
+}
+
+.promo-kz__box::after {
+  content: "";
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  right: -130px;
+  top: -130px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 66, 180, 0.16), transparent 68%);
+}
+
+.promo-kz__top {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 45px 30px 20px;
+}
+
+.promo-kz__brand {
+  color: #f36b16;
+  font-weight: 900;
+  font-size: 34px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.promo-kz__title {
+  margin: 0;
+  color: #073d9c;
+  font-size: clamp(42px, 7vw, 82px);
+  line-height: 0.92;
+  font-weight: 1000;
+  letter-spacing: 1px;
+}
+
+.promo-kz__week {
+  margin: 18px 0 16px;
+  color: #163d76;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.promo-kz__week span {
+  color: #ff671c;
+  font-size: 34px;
+  font-weight: 900;
+}
+
+.promo-kz__main-label {
+  display: inline-block;
+  padding: 13px 42px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #ff8a00, #ff4a00);
+  color: #fff;
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 1000;
+  box-shadow: 0 14px 30px rgba(255, 87, 0, 0.24);
+  animation: promoKzPulse 2s ease-in-out infinite;
+}
+
+.promo-kz__grid {
+  display: grid;
+  grid-template-columns: 2fr 0.8fr;
+  gap: 18px;
+  padding: 20px 28px 28px;
+  position: relative;
+  z-index: 2;
+}
+
+.promo-kz__one,
+.promo-kz__two {
+  border-radius: 26px;
+  overflow: hidden;
+}
+
+.promo-kz__one {
+  border: 2px solid #ff6420;
+  background: #fff;
+}
+
+.promo-kz__two {
+  background: linear-gradient(160deg, #075ac9, #052d85);
+  border: 3px solid #0b50b7;
+  color: #fff;
+  box-shadow: 0 20px 40px rgba(3, 55, 145, 0.22);
+  animation: promoKzFloat 4s ease-in-out infinite;
+}
+
+.promo-kz__offer-title {
+  text-align: center;
+  color: #fff;
+  font-weight: 1000;
+  line-height: 1;
+}
+
+.promo-kz__offer-title--orange {
+  padding: 15px;
+  font-size: 72px;
+  background: linear-gradient(135deg, #ff8d00, #ff4500);
+}
+
+.promo-kz__offer-title--blue {
+  padding: 22px 10px;
+  font-size: 86px;
+}
+
+.promo-kz__products {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  padding: 18px 24px 22px;
+}
+
+.promo-kz__products ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.promo-kz__products li {
+  position: relative;
+  padding: 5px 0 5px 17px;
+  color: #182336;
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+.promo-kz__products li::before {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  left: 0;
+  top: 11px;
+  background: #ff5b19;
+}
+
+.promo-kz__products b {
+  color: #073d9c;
+  margin-right: 6px;
+}
+
+.promo-kz__two-content {
+  text-align: center;
+  padding: 75px 20px 70px;
+}
+
+.promo-kz__two-content strong {
+  font-size: 56px;
+  display: block;
+  margin-bottom: 14px;
+}
+
+.promo-kz__two-content p {
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.promo-kz__bottom {
+  position: relative;
+  z-index: 2;
+}
+
+.promo-kz__slogan {
+  text-align: center;
+  padding: 18px;
+  color: #fff;
+  font-size: 34px;
+  font-style: italic;
+  background: linear-gradient(90deg, #033b9d, #ff6a00);
+}
+
+.promo-kz__benefits {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding: 22px 28px 28px;
+}
+
+.promo-kz__benefits > div {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 18px 22px;
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 12px 35px rgba(20, 55, 110, 0.08);
+}
+
+.promo-kz__benefits span {
+  font-size: 38px;
+}
+
+.promo-kz__benefits p {
+  margin: 0;
+  color: #18345b;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.promo-kz__benefits b {
+  color: #ff5d15;
+}
+
+@keyframes promoKzPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.025);
+  }
+}
+
+@keyframes promoKzFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@media (max-width: 900px) {
+  .promo-kz__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .promo-kz__two {
+    max-width: 100%;
+  }
+
+  .promo-kz__two-content {
+    padding: 40px 20px;
+  }
+}
+
+@media (max-width: 650px) {
+  .promo-kz {
+    padding: 35px 10px;
+  }
+
+  .promo-kz__box {
+    border-radius: 22px;
+  }
+
+  .promo-kz__top {
+    padding: 30px 15px 15px;
+  }
+
+  .promo-kz__brand {
+    font-size: 23px;
+  }
+
+  .promo-kz__week {
+    font-size: 17px;
+  }
+
+  .promo-kz__week span {
+    font-size: 24px;
+  }
+
+  .promo-kz__main-label {
+    padding: 10px 22px;
+  }
+
+  .promo-kz__grid {
+    padding: 12px;
+  }
+
+  .promo-kz__offer-title--orange {
+    font-size: 54px;
+  }
+
+  .promo-kz__offer-title--blue {
+    font-size: 62px;
+  }
+
+  .promo-kz__products {
+    grid-template-columns: 1fr;
+    padding: 16px;
+  }
+
+  .promo-kz__products li {
+    font-size: 12px;
+  }
+
+  .promo-kz__slogan {
+    font-size: 23px;
+  }
+
+  .promo-kz__benefits {
+    grid-template-columns: 1fr;
+    padding: 16px;
+  }
+}
